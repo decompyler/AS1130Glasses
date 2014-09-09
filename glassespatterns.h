@@ -514,7 +514,7 @@ void beatingHearts() {
   }
 }
 
-byte currentEyesFrame = 0;
+byte currentEyesFrame = 3;
 byte eyesLoopCount = 0;
 void googlyEyes() {
   

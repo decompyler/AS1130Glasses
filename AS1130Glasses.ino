@@ -34,7 +34,7 @@ boolean patternInit = false;
 
 byte currentPattern = 0;
 boolean autoCycle = true;
-byte currBrightness = startbrightness;
+
 
 // Begin program
 void setup()
@@ -42,7 +42,7 @@ void setup()
 
   currentPattern = EEPROM.read(1); 
   autoCycle = EEPROM.read(2); 
-  currBrightness = EEPROM.read(3); 
+  
 
   Wire.begin();                // Start I2C
   TWBR = 2;                    // Set to 400KHz bus speed (on 8MHz device)

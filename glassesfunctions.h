@@ -371,7 +371,8 @@ byte getCIE (byte value) {
 
 
 // Cycle through several brightness settings
-byte brightness = currBrightness;
+byte brightness = EEPROM.read(3);
+
 void cycleBrightness() {
 
   if (brightness > 204) {
@@ -383,8 +384,7 @@ void cycleBrightness() {
   byte newBrightness = getCIE(brightness);
   setBrightness(glassesRight, newBrightness);
   setBrightness(glassesLeft, newBrightness);
-  currBrightness = newBrightness;
-  EEPROM.write(3, currBrightness);
+  EEPROM.write(3, newBrightness);
 }
 
 
